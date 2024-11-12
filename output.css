@@ -593,11 +593,11 @@ video {
 }
 
 .right-0 {
-  right: 0px;
+  right: 0;
 }
 
 .top-0 {
-  top: 0px;
+  top: 0;
 }
 
 .z-20 {
@@ -771,7 +771,7 @@ video {
 
 .bg-yellow-300 {
   --tw-bg-opacity: 1;
-  background-color: rgb(253 224 71 / var(--tw-bg-opacity));
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .px-4 {
