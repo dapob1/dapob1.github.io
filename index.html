@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html> <p lang="en-GB"></p>
+<html lang="en"> <p lang="en-GB"></p>
   <head>
     <title>ADWA Studio</title>
-    <link rel="icon" href="./assets/adwasvg.svg" />
+    <link rel="icon" href="./assets/adwasvg.svg" type="image/svg+xml"/>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./output.css" rel="stylesheet" />
@@ -10,16 +10,16 @@
   <body class="bg-neutral-800 font-sans">
     <!-- Header -->
     <header class="py-8 px-4">
-      <div class="container mx-auto flex flex-row">
-        <div class="container mx-auto flex flex-row">
+      <div class="container mx-auto flex flex-col md:flex-row gap-4">
+        <div class="container mx-auto flex flex-col md:flex-row gap-4">
           <!--logo-->
           <div class="size-16 my-auto">
             <a href="./index.html">
-              <img src="./assets/adwasvg.svg" lt="ADWA Studio Logo"/>
+              <img src="./assets/adwasvg.svg" loading="lazy" alt="ADWA Studio Logo"/>
             </a>
           </div>
-          <div class="px-64 text-white hidden lg:block my-auto">
-            <h1 class="font-semibold"></h1>
+          <div class="px-4 md:px-16 lg:px-64 text-white hidden lg:block my-auto">
+          <h1 class="font-semibold"></h1>
           </div>
         </div>
 
@@ -82,7 +82,7 @@
     <!-- hero -->
     <section class="hero mt-16 mb-28 lg:mb-44">
       <div class="container text-white mx-auto">
-        <h1 class="text-5xl lg:text-9xl ml-4">
+        <h1 class="text-3xl sm:text-5xl lg:text-9xl ml-4">
           Building Africa's Next Global Champions.
         </h1>
         <h1 class="mt-4 lg:mt-24 text-xl lg:text-4xl ml-4">

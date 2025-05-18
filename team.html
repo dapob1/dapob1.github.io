@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html> <p lang="en-GB"></p>
+<html lang="en"> <p lang="en-GB"></p>
   <head>
     <title>Adwa</title>
     <link rel="icon" href="./assets/adwasvg.svg" />
@@ -10,16 +10,17 @@
   <body class="bg-neutral-800 font-sans">
     <!-- Header -->
     <header class="py-8 px-4">
-      <div class="container mx-auto flex flex-row">
-        <div class="container mx-auto flex flex-row">
+      <div class="container mx-auto flex flex-col md:flex-row gap-4">
+        <div class="container mx-auto flex flex-col md:flex-row gap-4">
           <!--logo-->
           <div class="size-16 my-auto">
             <a href="./index.html">
-              <img src="./assets/adwasvg.svg" alt="Adwa Studio Logo"/>
+              <img src="./assets/adwasvg.svg" loading="lazy" alt="Adwa Studio Logo"/>
             </a>
           </div>
-          <div class="px-64 text-white hidden lg:block my-auto">
-            <h1 class="font-semibold"></h1>
+          <div class="px-4 md:px-16 lg:px-64 text-white hidden lg:block my-auto">
+
+          <h1 class="font-semibold"></h1>
           </div>
         </div>
 
@@ -81,22 +82,31 @@
       <div class="container text-white mx-auto mt-32">
         <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 mx-4">
           <div class="mx-4 mb-8"> <a href="https://linkedin.com/in/bakare">
-            <img
-              src="./assets/daps_square.jpg"
-              class="w-[300px]"
-              alt="Picture of Oladapo Bakare"
-            /></a>
+
+            <img src="./assets/daps_square.jpg" class="w-full max-w-[300px] aspect-square object-cover rounded-lg mx-auto" alt="Picture of Oladapo Bakare" />
+
+            </a>
             <h1 class="text-xl mt-4"><a href="https://linkedin.com/in/bakare"> Oladapo (Daps) Bakare</a></h1>
             <h1 class="text-xl text-gray-400 mt-2">Managing Partner</h1>
+            <div class="flex justify-center gap-2 mt-3">
+              <a href="https://linkedin.com/in/bakare" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/linkedin-logo.svg" alt="LinkedIn" class="w-5 h-5 hover:opacity-75" />
+              </a>
+
+            </div>
           </div>
           <div class="mx-4 mb-8">
-            <a href="https://www.linkedin.com/in/fran%C3%A7ois-bonin-8942b/"><img
-              src="./assets/cois.jpg"
-              class="w-[30px]"
-              alt="Picture of Francois Bonin"
-            /></a>
+            <a href="https://www.linkedin.com/in/fran%C3%A7ois-bonin-8942b/">
+              <img src="./assets/cois.jpg" class="w-full max-w-[300px] aspect-square object-cover rounded-lg mx-auto" alt="Picture of Francois Bonin" /></a>
             <h1 class="text-xl mt-4"> <a href="https://www.linkedin.com/in/fran%C3%A7ois-bonin-8942b/"> Francois (Cois) Bonin</a></h1>
             <h1 class="text-xl text-gray-400 mt-2">Managing Partner</h1>
+
+            <div class="flex justify-center gap-2 mt-3">
+              <a href="https://www.linkedin.com/in/fran%C3%A7ois-bonin-8942b/" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/linkedin-logo.svg" alt="LinkedIn" class="w-5 h-5 hover:opacity-75" />
+              </a>
+
+            </div>
           </div>
 
 
