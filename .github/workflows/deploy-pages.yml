@@ -5,8 +5,11 @@ on:
     branches: [main]
   workflow_dispatch:
 
+# Repo Pages settings still use legacy "Deploy from a branch" (main /).
+# Actions artifact deploys are ignored for adwa.studio, so we publish the
+# static export onto main (keep source files) and skip the follow-up CI loop.
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -15,7 +18,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -33,23 +36,18 @@ jobs:
       - name: Build static site
         run: npm run build
 
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Publish out/ to main for legacy Pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          path: out
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
+          publish_branch: main
+          keep_files: true
+          enable_jekyll: false
+          cname: adwa.studio
+          commit_message: "Deploy static site [skip ci]"
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-
-      - name: Bind custom domain adwa.studio
+      - name: Bind custom domain via Pages API
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -60,9 +58,4 @@ jobs:
             "https://api.github.com/repos/${{ github.repository }}/pages" \
             -d '{"cname":"adwa.studio","https_enforced":true,"build_type":"workflow"}')
           echo "HTTP $response"
-          cat /tmp/pages.json
-          # 200/204 = success; non-fatal if token lacks admin (root CNAME still binds legacy source)
-          if [ "$response" != "200" ] && [ "$response" != "204" ]; then
-            echo "Pages API could not update domain (needs repo admin). Root CNAME on main is the fallback for legacy source."
-          fi
-
+          cat /tmp/pages.json || true

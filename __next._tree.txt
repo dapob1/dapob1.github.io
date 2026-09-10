@@ -1,0 +1,10 @@
+:HL["/_next/static/chunks/9419a35b6773f591.css","style"]
+:HL["/_next/static/media/GT_America_Standard_Black_Trial-s.p.69bd21f3.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/GT_America_Standard_Bold_Italic_Trial-s.p.4ae146a8.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/GT_America_Standard_Bold_Trial-s.p.06bf1b15.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/GT_America_Standard_Light_Trial-s.p.c18b8a14.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/GT_America_Standard_Medium_Italic_Trial-s.p.ad624b30.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/GT_America_Standard_Medium_Trial-s.p.cae91151.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/GT_America_Standard_Regular_Italic_Trial-s.p.d4f4e728.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/GT_America_Standard_Regular_Trial-s.p.ad87737e.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"buildId":"HgOYz0tiJ7pK1Y2sgH9NK","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
