@@ -4,6 +4,7 @@ import { useState, type FormEvent } from "react";
 import { MotionSection } from "@/components/motion/MotionSection";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
+import { site } from "@/lib/content";
 import { cn } from "@/lib/utils";
 
 type Status = "idle" | "loading" | "success" | "error";
@@ -13,7 +14,7 @@ export function Contact() {
   const [message, setMessage] = useState("");
   const [errors, setErrors] = useState<Record<string, string>>({});
 
-  async function onSubmit(e: FormEvent<HTMLFormElement>) {
+  function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("loading");
     setErrors({});
@@ -45,26 +46,17 @@ export function Contact() {
       return;
     }
 
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-      const json = await res.json();
-      if (!res.ok) throw new Error(json.error || "Something went wrong");
+    const subject = encodeURIComponent(
+      `ADWA Studio inquiry from ${data.name}`,
+    );
+    const body = encodeURIComponent(
+      `From: ${data.name} <${data.email}>\n\n${data.message}`,
+    );
+    window.location.href = `mailto:${site.email}?subject=${subject}&body=${body}`;
 
-      setStatus("success");
-      setMessage(
-        json.demo
-          ? "Message received (demo mode — add SendGrid keys to send live)."
-          : "Thanks — we'll be in touch soon.",
-      );
-      form.reset();
-    } catch (err) {
-      setStatus("error");
-      setMessage(err instanceof Error ? err.message : "Failed to send");
-    }
+    setStatus("success");
+    setMessage("Opening your email client — thanks, we'll be in touch soon.");
+    form.reset();
   }
 
   return (
