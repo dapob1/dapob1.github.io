@@ -172,19 +172,7 @@ export const ventures: Venture[] = [
     description:
       "Oyana helps YouTube creators understand their audience, optimize their content, and grow smarter with AI-driven analytics — built by a team that shipped products inside YouTube, Amazon, and Google.",
     href: "https://oyana.ai",
-    image:
-      "https://images.unsplash.com/photo-1611162617474-5b21e11e480f?w=1600&q=80",
-  },
-  {
-    slug: "acutemeter",
-    name: "Acutemeter",
-    tagline: "Precision insights for modern operators",
-    description:
-      "[PLACEHOLDER] Verified Acutemeter tagline and description pending — swap this copy when ready.",
-    href: "https://acutemeter.com",
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&q=80",
-    placeholder: true,
+    image: "/images/ventures/oyana-dashboard.png",
   },
 ];
 
@@ -220,7 +208,6 @@ export const logos = [
   "Amazon",
   "Google",
   "Oyana",
-  "Acutemeter",
   "GE Healthcare",
   "Philips",
 ];
@@ -282,8 +269,7 @@ export const blogPosts: BlogPost[] = [
       "Why our name is a mandate — victory against odds, built with African talent for global impact.",
     date: "2026-03-12",
     tags: ["Studio", "Vision"],
-    image:
-      "https://images.unsplash.com/photo-1489392191049-34982dda90cc?w=1200&q=80",
+    image: "/images/blog/spirit-of-adwa.jpg",
     body: [
       "The Battle of Adwa is more than history to us — it is a design brief for how we build companies.",
       "We partner with founders who refuse to accept that African ventures must play small on the world stage.",
@@ -297,8 +283,7 @@ export const blogPosts: BlogPost[] = [
       "How shipping inside YouTube, Amazon, and Google shapes how we co-create with founders.",
     date: "2026-02-04",
     tags: ["Team", "Building"],
-    image:
-      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80",
+    image: "/images/blog/operators.jpg",
     body: [
       "Capital without craft is incomplete. Our team has built products and systems at global scale.",
       "That experience shows up in the prototypes we ship, the architectures we choose, and the ops we install.",
@@ -312,8 +297,7 @@ export const blogPosts: BlogPost[] = [
       "Building world-class companies where the talent already is — and connecting them outward.",
     date: "2026-01-18",
     tags: ["Africa", "Ventures"],
-    image:
-      "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1200&q=80",
+    image: "/images/blog/african-soil.jpg",
     body: [
       "The next generation of global champions will not all be born in the same three cities.",
       "ADWA exists to make breakthrough ventures the norm — not the exception — across the continent.",

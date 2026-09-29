@@ -32,7 +32,7 @@ export function Hero() {
     >
       <motion.div style={{ y }} className="absolute inset-0 -z-10">
         <Image
-          src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=2400&q=85"
+          src="/images/hero/adwa-landscape.jpg"
           alt=""
           fill
           priority

@@ -49,6 +49,10 @@ jobs:
           touch .nojekyll
           printf '%s\n' 'adwa.studio' > CNAME
 
+          # Drop retired venture publish artifacts
+          rm -rf work/acutemeter work/acutemeter.html work/acutemeter.txt 2>/dev/null || true
+          rm -f work/acutemeter.html work/acutemeter.txt 2>/dev/null || true
+
           git add -A
           if git diff --cached --quiet; then
             echo "No static publish changes"

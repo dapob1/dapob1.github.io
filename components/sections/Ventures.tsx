@@ -46,12 +46,12 @@ export function VenturesSection({
                 <div className="relative aspect-[16/10] overflow-hidden bg-neutral-900">
                   <Image
                     src={venture.image}
-                    alt=""
+                    alt={`${venture.name} product`}
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
-                    className="object-cover transition-transform duration-700 hover:scale-105"
+                    className="object-cover object-top transition-transform duration-700 hover:scale-[1.02]"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-neutral-dark/70 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-neutral-dark/50 via-transparent to-transparent" />
                 </div>
 
                 <div>
