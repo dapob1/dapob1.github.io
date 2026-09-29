@@ -6,8 +6,7 @@ on:
   workflow_dispatch:
 
 # Repo Pages settings still use legacy "Deploy from a branch" (main /).
-# Actions artifact deploys are ignored for adwa.studio, so we publish the
-# static export onto main (keep source files) and skip the follow-up CI loop.
+# peaceiris blocks main→main, so we copy out/ onto main and push with [skip ci].
 permissions:
   contents: write
   pages: write
@@ -23,6 +22,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -37,15 +39,24 @@ jobs:
         run: npm run build
 
       - name: Publish out/ to main for legacy Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out
-          publish_branch: main
-          keep_files: true
-          enable_jekyll: false
-          cname: adwa.studio
-          commit_message: "Deploy static site [skip ci]"
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # Merge static export into repo root without wiping Next.js source
+          cp -a out/. .
+          touch .nojekyll
+          printf '%s\n' 'adwa.studio' > CNAME
+
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No static publish changes"
+            exit 0
+          fi
+
+          git commit -m "Deploy static site [skip ci]"
+          git push origin "HEAD:${{ github.ref_name }}"
 
       - name: Bind custom domain via Pages API
         env:
