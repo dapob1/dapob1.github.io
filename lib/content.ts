@@ -106,6 +106,7 @@ export type TeamMember = {
   role: string;
   bio: string;
   image: string;
+  linkedin: string;
 };
 
 export const team: TeamMember[] = [
@@ -114,30 +115,35 @@ export const team: TeamMember[] = [
     role: "Product",
     bio: "Spent two decades building products at YouTube, Amazon, and Google before starting Oyana to help creators grow.",
     image: "/images/team/daps.jpg",
+    linkedin: "https://www.linkedin.com/in/bakare/",
   },
   {
     name: "François",
     role: "Architect",
     bio: "Architected large-scale systems at Amazon and Google, then designed the backend that powers Oyana.",
     image: "/images/team/francois.jpg",
+    linkedin: "https://www.linkedin.com/in/fran%C3%A7ois-bonin-8942b/",
   },
   {
     name: "Arlene",
     role: "Operations",
     bio: "Ran global teams at GE Healthcare and Royal Philips. At Oyana, she touches everything except the code.",
     image: "/images/team/arlene.jpg",
+    linkedin: "https://www.linkedin.com/in/arlenesargeant/",
   },
   {
     name: "Nathan",
     role: "Engineer",
     bio: "Turns ideas into prototypes, keeps engineering on track, and helps with marketing analytics.",
     image: "/images/team/nathan.jpg",
+    linkedin: "https://www.linkedin.com/in/nathanturkson/",
   },
   {
     name: "Tochie",
     role: "Marketing",
     bio: "Storyteller who sweats the details. Leads brand awareness and creator relationships at Oyana.",
     image: "/images/team/tochie.jpg",
+    linkedin: "https://www.linkedin.com/in/tochukwu-falola",
   },
 ];
 
