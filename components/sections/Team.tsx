@@ -51,7 +51,7 @@ export function TeamSection({
                 <div className="relative aspect-square w-24 overflow-hidden md:w-32">
                   <Image
                     src={member.image}
-                    alt=""
+                    alt={member.name}
                     fill
                     sizes="128px"
                     className="object-cover grayscale transition-[filter,transform] duration-500 group-hover:scale-105 group-hover:grayscale-0"
@@ -74,7 +74,7 @@ export function TeamSection({
         {limit && (
           <div className="mt-10">
             <Link
-              href="/team"
+              href="/about"
               className="inline-flex border-b border-secondary pb-1 text-sm font-medium text-secondary transition-colors hover:border-primary hover:text-primary"
             >
               View full team →

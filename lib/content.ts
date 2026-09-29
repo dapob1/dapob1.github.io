@@ -16,7 +16,7 @@ export const navLinks = [
   { label: "Vision", href: "/#vision" },
   { label: "What We Do", href: "/#what-we-do" },
   { label: "Why ADWA", href: "/#why-adwa" },
-  { label: "Team", href: "/team" },
+  { label: "About", href: "/about" },
   { label: "Contact", href: "/#contact" },
 ];
 
@@ -77,8 +77,29 @@ export const whyAdwa = {
   body: "Just as the Battle of Adwa marked a turning point in African history, we're here to help write the next chapter in Africa's business story. Our name carries the legacy of victory against overwhelming odds, and our mission is to empower entrepreneurs who share that same audacious spirit.",
 };
 
+export const aboutHero = {
+  title: "Every creator has a story to tell. Oyana helps you tell it so everyone listens.",
+  body: "We built Oyana because creators and agencies told us the same thing: they wish they knew why viewers left, not just the numbers.",
+};
+
+export const aboutBeliefs = {
+  eyebrow: "We Believe",
+  intro:
+    "In our name Oyana, which means to inspire and uplift, we aim to be the editor-coach working alongside creators and agencies.",
+  items: [
+    {
+      title: "Retention Is A Signal",
+      body: "Retention isn't a mystery; it's a signal. Every drop, every skip, every replay tells you something about what your audience felt in that moment. We get to know you and, over time, what resonates with your audience.",
+    },
+    {
+      title: "Human Support Matters",
+      body: "Not everything has to be AI and there's value in human interaction. Oyana Circle, your concierge, is enabled with AI tools to further help you.",
+    },
+  ],
+};
+
 export const teamIntro =
-  "Meet The Team — We have shipped products inside YouTube, Amazon, and Google, designed systems that handle massive scale, created companies, and supported creators across Africa leading to the founding of Oyana.";
+  "We have shipped products inside YouTube, Amazon, and Google, designed systems that handle massive scale, created companies, and supported creators across Africa leading to the founding of Oyana.";
 
 export type TeamMember = {
   name: string;
@@ -92,38 +113,40 @@ export const team: TeamMember[] = [
     name: "Daps",
     role: "Product",
     bio: "Spent two decades building products at YouTube, Amazon, and Google before starting Oyana to help creators grow.",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
+    image: "/images/team/daps.jpg",
   },
   {
     name: "François",
     role: "Architect",
     bio: "Architected large-scale systems at Amazon and Google, then designed the backend that powers Oyana.",
-    image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&q=80",
+    image: "/images/team/francois.jpg",
   },
   {
     name: "Arlene",
     role: "Operations",
     bio: "Ran global teams at GE Healthcare and Royal Philips. At Oyana, she touches everything except the code.",
-    image:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80",
+    image: "/images/team/arlene.jpg",
   },
   {
     name: "Nathan",
     role: "Engineer",
     bio: "Turns ideas into prototypes, keeps engineering on track, and helps with marketing analytics.",
-    image:
-      "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=800&q=80",
+    image: "/images/team/nathan.jpg",
   },
   {
     name: "Tochie",
     role: "Marketing",
     bio: "Storyteller who sweats the details. Leads brand awareness and creator relationships at Oyana.",
-    image:
-      "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&q=80",
+    image: "/images/team/tochie.jpg",
   },
 ];
+
+export const aboutCta = {
+  title: "Ready to See What Your Audience Really Thinks?",
+  body: "Oyana is built for YouTube creators and their teams. We use the YouTube API to securely access your video captions, retention metrics, and audience data to give you timestamped, actionable recommendations to increase your viewership.",
+  primary: { label: "Get Early Access", href: "https://oyana.ai" },
+  secondary: { label: "Contact Us", href: "/#contact" },
+};
 
 export type Venture = {
   slug: string;
