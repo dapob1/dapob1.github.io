@@ -46,6 +46,7 @@ export function Footer() {
             </li>
             <li>{site.address}</li>
           </ul>
+          {/* Temporary: social links hidden until real profiles are ready
           <ul className="mt-6 flex flex-wrap gap-4">
             {site.social.map((s) => (
               <li key={s.label}>
@@ -60,6 +61,7 @@ export function Footer() {
               </li>
             ))}
           </ul>
+          */}
         </div>
       </div>
 

@@ -4,11 +4,13 @@ export const site = {
   email: "hello@adwa.studio",
   phone: "",
   address: "Africa · Global",
-  social: [
-    { label: "LinkedIn", href: "https://linkedin.com" },
-    { label: "X", href: "https://x.com" },
-    { label: "GitHub", href: "https://github.com" },
-  ],
+  // Temporary: hide footer social links until real profiles are ready
+  // social: [
+  //   { label: "LinkedIn", href: "https://linkedin.com" },
+  //   { label: "X", href: "https://x.com" },
+  //   { label: "GitHub", href: "https://github.com" },
+  // ],
+  social: [] as { label: string; href: string }[],
 };
 
 export const navLinks = [
